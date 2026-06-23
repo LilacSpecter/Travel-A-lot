@@ -5,7 +5,7 @@
     <title>Travel A Lot!!!</title>
 
     <!--my css-->
-    <link herf="TAL.css" rel="stylesheet">
+    <link herf="TRAVEL A LOT.css" rel="stylesheet">
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -21,26 +21,84 @@
 
     <!--don't type anything inside the style unless-->
     <style>
-        body {
-            background-color: rgb(243, 166, 217)
+       body {
+            background-image: linear-gradient(to bottom, pink, purple);
+            background-repeat: no-repeat;
+            background-position: top center;
         }
 
         .bbb {
             background-color: rgba(0, 0, 0, 0);
-            text-align: centre;
+            text-align: center;
         }
 
-        .l {
-            Text-align: left;
-        }
+       
+       /* Card container for multiple cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 
-        .r {
-            Text-align: right;
-        }
+/* Individual card styling */
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    overflow: hidden;
+    flex: 1 1 350px; /* Flexible width, min 350px */
+    max-width: 500px; /* Bigger cards */
+    transition: transform 0.2s ease;
+}
 
-        .c {
-            Text-align: center;
-        }
+/* Hover effect */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Card image */
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Card content */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin: 0 0 12px;
+    font-size: 1.5em; /* Bigger title */
+}
+
+.card-content p {
+    color: #555;
+    font-size: 1.05em; /* Slightly bigger text */
+    line-height: 1.5;
+}
+
+/* Button styling */
+.card-content a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 16px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+.card-content a:hover {
+    background-color: #0056b3;
+}
+
+    .card {
+        max-width: 95%; /* Take most of the screen width */
+    }
     </style>
 
 
@@ -48,7 +106,7 @@
 
 <body>
     <!--navbar-->
-    <div class="container-fluid text-white" style="background-color: black;">
+    <div id="top-bar">
         <nav>
             <a href="#"><button class="bbb p-3 my-1">Tal</button></a>
             <a href="#"><button class="bbb p-3 my-1">home</button></a>
@@ -59,7 +117,7 @@
     </div>
     <!--container-fluid-->
     <!--Hero-->
-    <div class="container-fluid text-black p-4" style="background-color:rgb(238, 114, 134)">
+    <div class="container-fluid text-black p-4" >
         <div class="l">
             <h1>Travel A Lot...</h1>    
         </div>
@@ -69,9 +127,16 @@
         </div>
         <p class="l">the right place <br> right time <br> right feeling</p>
     </div>
-    <div>
-        <!--info the first part-->
+    <!-- Card 1 -->
+    <div class="card p-3 my-3">
+        <img src="https://via.placeholder.com/300x180" alt="Sample Image">
+        <div class="card-content">
+            <h3>Card Title 1</h3>
+            <p>This is a short description for the first card. It can contain text, links, or other elements.</p>
+            <a href="#">Read More</a>
+        </div>
     </div>
+<br>
     <!--centre on the page-->
     <!--<div class="container-fluid" style="border: 2px solid rgb(0, 255, 136)">
             <div class="bg-info text-white p-3 my-2">
@@ -87,7 +152,7 @@
             </h2>
         </div> -->
     
-    <div class="container"> <!--carousell-->
+    <div class="container-fluid p-3 my-3"> <!--carousell-->
         <h2>Carousel Example</h2>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -124,10 +189,10 @@
         </div>
     </div>
 
+    <div class="container-fluid bg-dark text-white p-3 my-3">
+        <p>now this is ma footer</p>
+    </div>
+
 </body>
-
-<footer>
-
-</footer>
-
+<!--something was wrong-->
 </html>
