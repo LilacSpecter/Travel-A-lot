@@ -22,83 +22,88 @@
     <!--don't type anything inside the style unless-->
     <style>
        body {
-            background-image: linear-gradient(to bottom, pink, purple);
+            background-image: linear-gradient(to right, coral, purple);
             background-repeat: no-repeat;
             background-position: top center;
         }
 
         .bbb {
-            background-color: rgba(0, 0, 0, 0);
-            text-align: center;
+            background-color: rgb(83, 97, 224);
+            color: white;
+            border-radius: 10px;
+            display: inline-block;
         }
 
+        .tnavbar {
+            background-color: rgb(83, 97, 224);
+            padding: 10px;
+        }
+
+        #star {
+            animation: twinkle 2s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from { background-color: rgb(12, 93, 185); }
+            to   { background-color: rgba(38, 68, 235, 0.842);  }
+        }
        
        /* Card container for multiple cards */
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
 
-/* Individual card styling */
-.card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    overflow: hidden;
-    flex: 1 1 350px; /* Flexible width, min 350px */
-    max-width: 500px; /* Bigger cards */
-    transition: transform 0.2s ease;
-}
+    /* Individual card styling */
+    .card {
+        background-color: #000000;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        flex: 1 1 350px; /* Flexible width, min 350px */
+        max-width: 500px; /* Bigger cards */
+        transition: transform 0.2s ease;
+    }
 
-/* Hover effect */
-.card:hover {
-    transform: translateY(-5px);
-}
+    /* Hover effect */
+    .card:hover {
+        transform: translateY(-5px);
+    }
 
-/* Card image */
-.card img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+    /* Card image */
+    .card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 
-/* Card content */
-.card-content {
-    padding: 20px;
-}
-
-.card-content h3 {
-    margin: 0 0 12px;
-    font-size: 1.5em; /* Bigger title */
-}
-
-.card-content p {
-    color: #555;
-    font-size: 1.05em; /* Slightly bigger text */
-    line-height: 1.5;
-}
+    /* Card content */
+    .card-content {
+        padding: 20px;
+    }
+  
+       .card-content p {
+        color: #ffffff;
+    }
 
 /* Button styling */
-.card-content a {
+    .card-content a {
     display: inline-block;
-    margin-top: 12px;
     padding: 10px 16px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 1em;
-}
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    }
 
-.card-content a:hover {
+    .card-content a:hover {
     background-color: #0056b3;
-}
+    }
 
     .card {
-        max-width: 95%; /* Take most of the screen width */
+        max-width: 100%; /* Take most of the screen width */
     }
+
     </style>
 
 
@@ -106,12 +111,13 @@
 
 <body>
     <!--navbar-->
-    <div id="top-bar">
+    <div class="tnavbar" id="star">
         <nav>
             <a href="#"><button class="bbb p-3 my-1">Tal</button></a>
             <a href="#"><button class="bbb p-3 my-1">home</button></a>
             <a href="#"><button class="bbb p-3 my-1">about</button></a>
             <a href="#"><button class="bbb p-3 my-1">FAQ</button></a>
+            <a href="#"><button class="bbb p-3 my-1">All</button></a>
 
         </nav>
     </div>
@@ -133,24 +139,38 @@
         <div class="card-content">
             <h3>Card Title 1</h3>
             <p>This is a short description for the first card. It can contain text, links, or other elements.</p>
-            <a href="#">Read More</a>
+            <a href="#" id="star">Read More</a>
         </div>
     </div>
-<br>
-    <!--centre on the page-->
-    <!--<div class="container-fluid" style="border: 2px solid rgb(0, 255, 136)">
-            <div class="bg-info text-white p-3 my-2">
-                <h2></h2>
-                <p>I love reading adventure stories and discovering new facts everyday.</p>
 
+    <!-- Card 2 -->
+    <div class="card p-3 my-3">
+        <img src="https://via.placeholder.com/300x180" alt="Sample Image">
+        <div class="card-content">
+            <h3>Card Title 2</h3>
+            <p>This is a short description for the second card. It can contain text, links, or other elements.</p>
+            <a href="#" id="star">Read More</a>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card p-3 my-3">
+        <img src="https://via.placeholder.com/300x180" alt="Sample Image">
+        <div class="card-content">
+            <h3>Card Title 3</h3>
+            <p>This is a short description for the third card. It can contain text, links, or other elements.</p>
+            <a href="#" id="star">Read More</a>
+        </div>
+    </div>
+
+    <br>
+    <!--centre on the page-->
+    <div class="container-fluid" style="border: 2px solid rgb(0, 255, 136)">
+            <div class="p-3 my-2" style="color: white" id="star">
+                <h2>Fun Fact</h2>
+                <p>Traveling is a beautiful hobby to inculcate in your life during these stressful times.</p>
             </div>
-        </div> -->
-    <!--yellow background with a dark border-->
-    <!-- <div class="bg-warning  p-3 my-3">
-            <h2>Drawing</h2>
-            <p>I enjoy drawing animals and making my own comic strips.</p>
-            </h2>
-        </div> -->
+        </div>
     
     <div class="container-fluid p-3 my-3"> <!--carousell-->
         <h2>Carousel Example</h2>
@@ -195,4 +215,3 @@
 
 </body>
 <!--something was wrong-->
-</html>

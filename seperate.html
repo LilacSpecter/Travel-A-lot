@@ -88,6 +88,15 @@ body {
         max-width: 90%; /* Take most of the screen width */
     }
 }
+
+.star {
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { background-color: yellow; }
+  to   { background-color: white;  }
+}
     </style>
 </head>
 
@@ -127,6 +136,10 @@ body {
         </div>
     </div>
 
-</body>
+    <!-- Twinkling Star Effect -->
+    <div class="star">
+        <p>Twinkling Star Effect</p> 
+    </div>   
+    </body>
 
 </html>
