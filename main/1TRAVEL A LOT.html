@@ -28,15 +28,37 @@
         }
 
         .bbb {
+            color: rgb(255, 255, 255);
+            border: 2px solid rgb(83, 97, 224);
+            background-color: rgb(77, 86, 165);
+            border-radius: 10px;
+            padding: 8px 18px;
+        }
+
+        .bbb:hover {
             background-color: rgb(83, 97, 224);
             color: white;
-            border-radius: 10px;
-            display: inline-block;
+            transform: translateY(-5px);
         }
 
         .tnavbar {
             background-color: rgb(83, 97, 224);
             padding: 10px;
+            position:fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+
+        .r {
+            float: right;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .c {
+             text-align: center;
         }
 
         #star {
@@ -44,8 +66,8 @@
         }
 
         @keyframes twinkle {
-            from { background-color: rgb(12, 93, 185); }
-            to   { background-color: rgba(38, 68, 235, 0.842);  }
+            from { background-color: rgb(34, 112, 202); }
+            to   { background-color: rgba(9, 36, 194, 0.842);  }
         }
        
        /* Card container for multiple cards */
@@ -97,7 +119,7 @@
     }
 
     .card-content a:hover {
-    background-color: #0056b3;
+    background-color: #0067d4;
     }
 
     .card {
@@ -112,7 +134,7 @@
 <body>
     <!--navbar-->
     <div class="tnavbar" id="star">
-        <nav>
+        <nav >
             <a href="#"><button class="bbb p-3 my-1">Tal</button></a>
             <a href="#"><button class="bbb p-3 my-1">home</button></a>
             <a href="#"><button class="bbb p-3 my-1">about</button></a>
@@ -120,18 +142,23 @@
             <a href="#"><button class="bbb p-3 my-1">All</button></a>
 
         </nav>
-    </div>
+    </div><br><br>
     <!--container-fluid-->
     <!--Hero-->
+    
     <div class="container-fluid text-black p-4" >
-        <div class="l">
-            <h1>Travel A Lot...</h1>    
+        <div>
+            <h1 style="color:#ffffff">Travel A Lot...</h1>    
         </div>
         <div class="r">
             <p>this is where the image goes</p>
 
         </div>
-        <p class="l">the right place <br> right time <br> right feeling</p>
+        <ul>
+                <li style="color:#ffffff"><a href="#"><h4 style="color:#ffffff">the right place</h4></a></li>
+                <li style="color:#ffffff"><a href="#"><h4 style="color:#ffffff">the right time</h4></a></li>
+                <li style="color:#ffffff"><a href="#"><h4 style="color:#ffffff">the right feeling</h4   ></a></li>
+        </ul>
     </div>
     <!-- Card 1 -->
     <div class="card p-3 my-3">
@@ -208,10 +235,11 @@
             </a>
         </div>
     </div>
-    <br> <br><br>
-    <div class="container-fluid text-white p-3 my-3" style="background-color: #000;">
-        <p>now this is ma footer</p>
-        <br>
-    </div>
+    <footer class="container-fluid text-white p-3 my-3" style="background-color: #000;">
+        <div>
+            <p>now this is ma footer</p>
+            <br>
+        </div>
+    </footer>    
 </body>
 </html>
